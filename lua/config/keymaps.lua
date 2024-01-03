@@ -11,3 +11,10 @@ map("i", "<C-u>", 'copilot#Accept("<CR>")', {
   noremap = true,
   replace_keycodes = false,
 })
+
+map("n", "<leader>fm", "<cmd>lua require('telescope').extensions.media_files.media_files()<CR>", {
+  nowait = true,
+  silent = true,
+  noremap = true,
+  replace_keycodes = false,
+})

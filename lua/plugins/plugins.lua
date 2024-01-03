@@ -62,6 +62,9 @@ return {
     "nvim-telescope/telescope-media-files.nvim",
   },
   {
+    "nvim-lua/plenary.nvim",
+  },
+  {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-media-files.nvim",
