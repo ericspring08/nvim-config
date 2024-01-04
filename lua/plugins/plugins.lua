@@ -87,4 +87,7 @@ return {
   {
     "tpope/vim-fugitive",
   },
+  {
+    "wakatime/vim-wakatime",
+  },
 }
