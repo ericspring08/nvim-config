@@ -18,3 +18,11 @@ map("n", "<leader>fm", "<cmd>lua require('telescope').extensions.media_files.med
   noremap = true,
   replace_keycodes = false,
 })
+
+map("n", "<leader>dd", function()
+  require("duck").hatch("🦆", 10)
+end, {}) -- A pretty fast duck
+
+map("n", "<leader>dc", function()
+  require("duck").hatch("🐈", 0.75)
+end, {}) -- Quite a mellow cat

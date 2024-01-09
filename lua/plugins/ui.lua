@@ -33,4 +33,15 @@ return {
       vim.g.minimap_auto_start_win_enter = 1
     end,
   },
+  {
+    "tamton-aquib/duck.nvim",
+    config = function()
+      vim.keymap.set("n", "<leader>dd", function()
+        require("duck").hatch()
+      end, {})
+      vim.keymap.set("n", "<leader>dk", function()
+        require("duck").cook()
+      end, {})
+    end,
+  },
 }
