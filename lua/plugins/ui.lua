@@ -42,6 +42,9 @@ return {
       vim.keymap.set("n", "<leader>dk", function()
         require("duck").cook()
       end, {})
+      vim.api.nvim_create_autocmd("VimEnter", {
+        command = [[lua require("duck").hatch()]],
+      })
     end,
   },
 }
