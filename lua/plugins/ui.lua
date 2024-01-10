@@ -34,17 +34,11 @@ return {
     end,
   },
   {
-    "tamton-aquib/duck.nvim",
-    config = function()
-      vim.keymap.set("n", "<leader>dd", function()
-        require("duck").hatch()
-      end, {})
-      vim.keymap.set("n", "<leader>dk", function()
-        require("duck").cook()
-      end, {})
-      vim.api.nvim_create_autocmd("VimEnter", {
-        command = [[lua require("duck").hatch()]],
-      })
+    "giusgad/pets.nvim",
+    cmd = { "PetsNew", "PetsNewCustom", "PetsList", "PetsKill", "PetsKillAll" },
+    dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
+    init = function()
+      require("pets").setup({})
     end,
   },
 }
