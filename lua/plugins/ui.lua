@@ -38,7 +38,13 @@ return {
     cmd = { "PetsNew", "PetsNewCustom", "PetsList", "PetsKill", "PetsKillAll" },
     dependencies = { "MunifTanjim/nui.nvim", "giusgad/hologram.nvim" },
     init = function()
-      require("pets").setup({})
+      require("pets").setup({
+        speed_multiplier = 2,
+      })
+      -- launch pets on startup
+      vim.defer_fn(function()
+        vim.cmd("PetsNew pet")
+      end, 1000)
     end,
   },
 }
